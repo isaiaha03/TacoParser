@@ -33,16 +33,17 @@ namespace LoggingKata
   
             // Complete the Parse method in TacoParser class first and then START BELOW ----------
 
-            // TODO: Create two `ITrackable` variables with initial values of `null`. 
+            // DONE: Create two `ITrackable` variables with initial values of `null`. 
             // These will be used to store your two Taco Bells that are the farthest from each other.
             ITrackable furthestTacoBellA = null;
             ITrackable furthestTacoBellB = null;
             
-            // TODO: Create a `double` variable to store the distance
+            // DONE: Create a `double` variable to store the distance
+            double distance = 0;
 
-
-            // TODO: Add the Geolocation library to enable location comparisons: using GeoCoordinatePortable;
+            // DONE: Add the Geolocation library to enable location comparisons: using GeoCoordinatePortable;
             // Look up what methods you have access to within this library.
+
 
             // NESTED LOOPS SECTION----------------------------
             
@@ -50,6 +51,10 @@ namespace LoggingKata
             // TODO: Create a loop to go through each item in your collection of locations.
             // This loop will let you select one location at a time to act as the "starting point" or "origin" location.
             // Naming suggestion for variable: `locA`
+            foreach (var locA in locations)
+            {
+
+            }
 
             // TODO: Once you have locA, create a new Coordinate object called `corA` with your locA's latitude and longitude.
 
