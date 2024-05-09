@@ -35,8 +35,11 @@ namespace LoggingKata
 
             // TODO: Create two `ITrackable` variables with initial values of `null`. 
             // These will be used to store your two Taco Bells that are the farthest from each other.
+            ITrackable furthestTacoBellA = null;
+            ITrackable furthestTacoBellB = null;
             
             // TODO: Create a `double` variable to store the distance
+
 
             // TODO: Add the Geolocation library to enable location comparisons: using GeoCoordinatePortable;
             // Look up what methods you have access to within this library.
