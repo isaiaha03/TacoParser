@@ -14,7 +14,6 @@ namespace LoggingKata
         {
             // Objective: Find the two Taco Bells that are the farthest apart from one another.
             // Some of the TODO's are done for you to get you started. 
-
             logger.LogInfo("Log initialized");
 
             // Use File.ReadAllLines(path) to grab all the lines from your csv file. 
@@ -85,8 +84,9 @@ namespace LoggingKata
 
             // Once you've looped through everything, you've found the two Taco Bells farthest away from each other.
             // Display these two Taco Bell locations to the console.
-            Console.WriteLine($"First Taco Bell Location: {furthestTacoBellA}");
-            Console.WriteLine($"Second Taco Bell Location: {furthestTacoBellB}");
+            Console.WriteLine($"The two Taco Bells farthest apart are:");
+            Console.WriteLine($"Location A: {furthestTacoBellA.Name}, Latitude: {furthestTacoBellA.Location.Latitude}, Longitude: {furthestTacoBellA.Location.Longitude}");
+            Console.WriteLine($"Location B: {furthestTacoBellB.Name}, Latitude: {furthestTacoBellB.Location.Latitude}, Longitude: {furthestTacoBellB.Location.Longitude}");
 
         }
     }
