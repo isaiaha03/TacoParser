@@ -48,33 +48,46 @@ namespace LoggingKata
             // NESTED LOOPS SECTION----------------------------
             
             // FIRST FOR LOOP -
-            // TODO: Create a loop to go through each item in your collection of locations.
+            // DONE: Create a loop to go through each item in your collection of locations.
             // This loop will let you select one location at a time to act as the "starting point" or "origin" location.
             // Naming suggestion for variable: `locA`
             foreach (var locA in locations)
             {
+                var corA = new GeoCoordinate(locA.Location.Latitude, locA.Location.Longitude);
 
+                foreach (var locB in locations)
+                {
+                    var corB = new GeoCoordinate(locB.Location.Latitude, locB.Location.Longitude);
+
+                    double tempDistance = corA.GetDistanceTo(corB);
+                    if (tempDistance > distance)
+                    {
+                        distance = tempDistance;
+                        furthestTacoBellA = locA;
+                        furthestTacoBellB = locB;
+                    }
+                }
             }
 
-            // TODO: Once you have locA, create a new Coordinate object called `corA` with your locA's latitude and longitude.
+            // DONE: Once you have locA, create a new Coordinate object called `corA` with your locA's latitude and longitude.
 
             // SECOND FOR LOOP -
-            // TODO: Now, Inside the scope of your first loop, create another loop to iterate through locations again.
+            // DONE: Now, Inside the scope of your first loop, create another loop to iterate through locations again.
             // This allows you to pick a "destination" location for each "origin" location from the first loop. 
             // Naming suggestion for variable: `locB`
 
-            // TODO: Once you have locB, create a new Coordinate object called `corB` with your locB's latitude and longitude.
+            // DONE: Once you have locB, create a new Coordinate object called `corB` with your locB's latitude and longitude.
 
-            // TODO: Now, still being inside the scope of the second for loop, compare the two locations using `.GetDistanceTo()` method, which returns a double.
+            // DONE: Now, still being inside the scope of the second for loop, compare the two locations using `.GetDistanceTo()` method, which returns a double.
             // If the distance is greater than the currently saved distance, update the distance variable and the two `ITrackable` variables you set above.
 
             // NESTED LOOPS SECTION COMPLETE ---------------------
 
             // Once you've looped through everything, you've found the two Taco Bells farthest away from each other.
             // Display these two Taco Bell locations to the console.
+            Console.WriteLine($"First Taco Bell Location: {furthestTacoBellA}");
+            Console.WriteLine($"Second Taco Bell Location: {furthestTacoBellB}");
 
-
-            
         }
     }
 }
